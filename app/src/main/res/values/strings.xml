@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Ejercicio2_AMR</string>
+    <string name="planeta">Planeta</string>
+    <string name="peliculas">Peliculas</string>
+    <string name="altura">Altura:</string>
+    <string name="fecha_de_naciemiento">Fecha de naciemiento:</string>
+    <string name="genero">Genero:</string>
 </resources>

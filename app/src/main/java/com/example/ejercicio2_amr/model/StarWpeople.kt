@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 data class StarWpeople(
 
-    @SerializedName("people")
-    var people: People? = null
+    @SerializedName("results")
+    var people: ArrayList<People>? = null
 
 )
 

@@ -28,10 +28,10 @@ class MainActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.IO).launch {
             val call = Constants.getRetrofit(). create(StarWapi::class.java).getStarWpeople("api/people")
-            call.enqueue(object: Callback<ArrayList<StarWpeople>> {
+            call.enqueue(object: Callback<StarWpeople> {
                 override fun onResponse(
-                    call: Call<ArrayList<StarWpeople>>,
-                    response: Response<ArrayList<StarWpeople>>
+                    call: Call<StarWpeople>,
+                    response: Response<StarWpeople>
                 ) {
                     Log.d(Constants.LOGTAG, "Respuesta del servidor: ${response.toString()} ")
                     Log.d(Constants.LOGTAG, "Datos: ${response.body().toString()} ")
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
 
-                override fun onFailure(call: Call<ArrayList<StarWpeople>>, t: Throwable) {
+                override fun onFailure(call: Call<StarWpeople>, t: Throwable) {
                     binding.pbConexion.visibility = View.GONE
                     Toast.makeText(this@MainActivity, "Error de conexión: ${t.message}", Toast.LENGTH_SHORT).show()
 

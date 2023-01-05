@@ -10,12 +10,12 @@ interface StarWapi {
     @GET()
     fun getStarWpeople(
         @Url url: String?
-    ): Call<ArrayList<StarWpeople>>
+    ): Call<StarWpeople>
 
-    @GET("api/planets/{id}")
+    /*@GET("api/planets/{id}")
     fun getStarWplanet(
         @Path("id") id: String?
-    ): Call<StarWplanet>
+    ): Call<StarWplanet>*/
 
 
 }

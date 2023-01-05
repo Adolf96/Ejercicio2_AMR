@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
-        android:text="Planeta"
+        android:text="@string/planeta"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
-        android:text="Peliculas"
+        android:text="@string/peliculas"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
@@ -112,6 +112,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
+        tools:ignore="TextContrastCheck"
         tools:text="altu" />
 
     <TextView
@@ -126,6 +127,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="TextContrastCheck"
         tools:text="naci" />
 
     <TextView
@@ -140,6 +142,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:ignore="TextContrastCheck"
         tools:text="gene" />
 
     <TextView
@@ -148,24 +151,26 @@
         android:layout_height="0dp"
         android:fontFamily="@font/russo_one"
         android:gravity="bottom"
-        android:text="Altura:"
+        android:text="@string/altura"
         android:textColor="#FF9800"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/titNac"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/russo_one"
-        android:text="Fecha de naciemiento:"
+        android:text="@string/fecha_de_naciemiento"
         android:textColor="#FF9800"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/titGen"
@@ -173,11 +178,12 @@
         android:layout_height="0dp"
         android:fontFamily="@font/russo_one"
         android:gravity="bottom"
-        android:text="Genero:"
+        android:text="@string/genero"
         android:textColor="#FF9800"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
