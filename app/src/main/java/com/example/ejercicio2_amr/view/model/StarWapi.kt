@@ -1,4 +1,4 @@
-package com.example.ejercicio2_amr.model
+package com.example.ejercicio2_amr.view.model
 
 import retrofit2.Call
 import retrofit2.http.GET

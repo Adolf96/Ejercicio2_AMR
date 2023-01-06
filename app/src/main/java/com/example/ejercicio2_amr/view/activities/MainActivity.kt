@@ -5,10 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ejercicio2_amr.databinding.ActivityMainBinding
-import com.example.ejercicio2_amr.model.StarWapi
-import com.example.ejercicio2_amr.model.StarWpeople
 import com.example.ejercicio2_amr.util.Constants
+import com.example.ejercicio2_amr.view.adapters.Adapter
+import com.example.ejercicio2_amr.view.model.People
+import com.example.ejercicio2_amr.view.model.StarWapi
+import com.example.ejercicio2_amr.view.model.StarWpeople
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -33,8 +36,22 @@ class MainActivity : AppCompatActivity() {
                     call: Call<StarWpeople>,
                     response: Response<StarWpeople>
                 ) {
-                    Log.d(Constants.LOGTAG, "Respuesta del servidor: ${response.toString()} ")
-                    Log.d(Constants.LOGTAG, "Datos: ${response.body().toString()} ")
+                    for(people in response.body()?.people!!){
+                        Log.d(Constants.LOGTAG, "${people.name}")
+                        Log.d(Constants.LOGTAG, "${people.height}")
+                        Log.d(Constants.LOGTAG, "${people.birth_year}")
+                        Log.d(Constants.LOGTAG, "${people.gender}")
+                    }
+
+                    /*val starwTmp: StarWpeople
+
+                    for(starwTmp in response.body()?.people!!){
+                        Toast.makeText(this@MainActivity, "Nombre del personaje: ${starwTmp.name}", Toast.LENGTH_SHORT).show()
+                    }*/
+
+                    binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
+                    binding.rvMenu.adapter = Adapter(this@MainActivity, response.body()?.people!!)
+
                     binding.pbConexion.visibility = View.GONE
 
                 }
@@ -48,5 +65,9 @@ class MainActivity : AppCompatActivity() {
             })
 
         }
+    }
+
+    fun selectOption(people: People) {
+
     }
 }

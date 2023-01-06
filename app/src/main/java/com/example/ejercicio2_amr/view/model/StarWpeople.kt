@@ -1,4 +1,4 @@
-package com.example.ejercicio2_amr.model
+package com.example.ejercicio2_amr.view.model
 
 import com.google.gson.annotations.SerializedName
 
